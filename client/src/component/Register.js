@@ -26,7 +26,7 @@ function Register() {
       setError({});
       try {
         const response = await axios.post(
-          "http://localhost:3000/user/register",
+          "https://harmanos.onrender.com/user/register",
           data
         );
         if (response.data.message) {

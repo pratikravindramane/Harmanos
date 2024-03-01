@@ -11,12 +11,15 @@ function AllUser() {
     const token = localStorage.getItem("token");
     const fetch = async () => {
       try {
-        const user = await axios.get(`http://localhost:3000/user/get-all`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        });
+        const user = await axios.get(
+          `https://harmanos.onrender.com/user/get-all`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
         if (user.data.message) {
           setError(user.data.message);
         } else {
@@ -33,12 +36,12 @@ function AllUser() {
     e.preventDefault();
     navigate(`/report/${e.target.id}`);
   };
-  
+
   const logoutHandler = async () => {
     const token = localStorage.getItem("token");
     try {
       const logout = await axios.get(
-        `http://localhost:3000/user/logout/${token}`,
+        `https://harmanos.onrender.com/user/logout/${token}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

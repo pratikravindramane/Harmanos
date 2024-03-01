@@ -26,7 +26,7 @@ function AddInstructor() {
       setError({});
       try {
         const response = await axios.post(
-          "http://localhost:3000/instructor/register",
+          "https://harmanos.onrender.com/instructor/register",
           data
         );
         if (response.data.message) {

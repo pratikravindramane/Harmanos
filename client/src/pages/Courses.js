@@ -10,12 +10,15 @@ function Courses() {
     const token = localStorage.getItem("token");
     const fetch = async () => {
       try {
-        const user = await axios.get(`http://localhost:3000/course/get-all`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        });
+        const user = await axios.get(
+          `https://harmanos.onrender.com/course/get-all`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
         if (user.data.message) {
           setError(user.data.message);
         } else {
@@ -38,7 +41,7 @@ function Courses() {
         {users?.map((i) => (
           <div key={i._id} className="courses-card">
             <img
-              src={`http://localhost:3000/public/${i.image}`}
+              src={`https://harmanos.onrender.com/public/${i.image}`}
               alt=""
               className="course-img"
             />

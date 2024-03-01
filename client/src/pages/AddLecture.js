@@ -18,7 +18,7 @@ function AddLecture() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:3000/instructor/get-all`,
+          `https://harmanos.onrender.com/instructor/get-all`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ function AddLecture() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:3000/course/lecture/add/${params.id}`,
+        `https://harmanos.onrender.com/course/lecture/add/${params.id}`,
         data,
         {
           headers: {

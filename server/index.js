@@ -25,7 +25,7 @@ app.use("/instructor", require("./route/auth"));
 app.use("/course", require("./route/course"));
 app.use(errorHandler);
 
-// run on port
+// running on port
 app.listen(process.env.PORT, () => {
   console.log(`connected to server at port ${process.env.PORT}`);
   connect();

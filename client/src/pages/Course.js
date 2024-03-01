@@ -14,7 +14,7 @@ function Course() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:3000/course/get/${params.id}`,
+          `https://harmanos.onrender.com/course/get/${params.id}`,
           // { CourseId: params.id },
           {
             headers: {
@@ -47,7 +47,7 @@ function Course() {
           <>
             <div key={course._id} className="courses-card">
               <img
-                src={`http://localhost:3000/public/${course.image}`}
+                src={`https://harmanos.onrender.com/public/${course.image}`}
                 alt=""
                 className="course-img"
               />

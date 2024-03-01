@@ -21,7 +21,7 @@ function Login() {
         return setError(loginValidate(data));
       }
       const response = await axios.post(
-        "http://localhost:3000/instructor/login",
+        "https://harmanos.onrender.com/instructor/login",
         data
       );
       if (response.data.message) {

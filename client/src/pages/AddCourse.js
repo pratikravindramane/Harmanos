@@ -16,7 +16,7 @@ function AddCourse() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:3000/instructor/get-all`,
+          `https://harmanos.onrender.com/instructor/get-all`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ function AddCourse() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:3000/course/add",
+        "https://harmanos.onrender.com/course/add",
         formData,
         {
           headers: {
@@ -69,7 +69,6 @@ function AddCourse() {
       } else {
         setSuccess(true);
       }
-      // const course = await axios.post(`http://localhost:3000/course/add`);
     } catch (error) {}
   };
   const handleFileChange = (e) => {

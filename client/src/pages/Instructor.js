@@ -14,7 +14,7 @@ function Instructor() {
     const fetch = async () => {
       try {
         const user = await axios.get(
-          `http://localhost:3000/instructor/ins/${params.id}`,
+          `https://harmanos.onrender.com/instructor/ins/${params.id}`,
           // { InstructorId: params.id },
           {
             headers: {
