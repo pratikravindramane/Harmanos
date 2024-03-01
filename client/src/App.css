@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color1: #140f0d;
+  --color2: #0e2d57;
+  --color3: #0965af;
+  --color4: #07a7ff;
+  --color5: #08f5ff;
+}
+body {
+  font-family: "Rubix", sans-serif;
+  /* background-color: var(--color1); */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+p {
+  margin: 0;
+}
+button {
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+  background-color: var(--color2);
+  color: white;
+  border: none;
+  border-radius: 25px;
+}
+img {
+  height: 200px;
+  width: 200px;
+}
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+}
+.error-div,
+.success-div {
+  color: white;
+  position: absolute;
+  top: 10px;
+  background-color: rgba(236, 0, 0, 0.678);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.success-div {
+  background-color: rgb(12, 137, 12);
+}
+/* header started */
+.header {
+  background-color: var(--color2);
+}
+.top-header p {
+  font-size: 10px;
+}
+.bottom-header {
+  border-top: 1px solid var(--color5);
+}
+/* header ended */
+/* footer */
+footer {
+  background-color: var(--color1);
+}
+/* footer ended */
+
+/* login */
+.login {
+  min-height: 85vh;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.login-div {
+  display: grid;
+  gap: 1rem;
+  width: 50%;
+  margin-inline: auto;
+}
+.login-div .input-grp input {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+/* login ended */
+
+/* home */
+.home-container {
+  min-height: 80vh;
+}
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  /* width: 50%; */
+}
+.home-btns {
+  padding: 2rem;
+  background-color: var(--color3);
+  color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 250ms ease-in-out;
+  text-align: center;
+}
+.home-btns:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--color2);
+}
+/* home ended */
+
+/* instructors */
+.instructors {
+  display: grid;
+  place-items: center;
+  min-height: 85vh;
+  padding-block: 2rem;
+}
+.ins-card {
+  width: 70%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+/* instructors ended */
+
+/* instructor */
+.instructor {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  min-height: 85vh;
+}
+.instructor > div {
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+.lecture {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--color2);
+  color: white;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid black;
+  border-radius: 10px;
+}
+.lecture p {
+  margin: 0;
+}
+/* instructor ended */
+
+/* course */
+.course {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  min-height: 85vh;
+}
+/* course ended */
+
+/* courses  */
+.courses {
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+  min-height: 85vh;
+}
+.courses-div {
+  display: grid;
+  gap: 2rem;
+}
+.courses-card {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 300px;
+  border-radius: 10px;
+}
+.course-content {
+  margin: 1rem;
+}
+.course-img {
+  width: 100% !important;
+  object-fit: cover;
+}
+/* courses ended */
+
+/* add instructor */
+.add-ins {
+  display: grid;
+  place-items: center;
+  min-height: 85vh;
+}
+.add-ins .add-ins-form {
+  display: grid;
+  place-items: center;
+  width: 70%;
+}
+.add-ins-form input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+/* add instructor ended */
+
+/* add course */
+.add-course,
+.add-lectures {
+  display: grid;
+  place-items: center;
+  min-height: 85vh;
+}
+.add-course form,
+.add-lectures form {
+  display: grid;
+  place-items: center;
+  width: 70%;
+}
+.input-lable {
+  margin-top: 1rem;
+}
+.add-course form input,
+.add-course form select,
+.add-lectures input,
+.add-lectures select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+/* add course ended */
+@media screen and (min-width: 800px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .instructors,
+  .courses-div {
+    margin-inline: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .ins-card {
+    height: 200px;
+    width: 300px;
+  }
+  .instructor > div {
+    width: 400px;
+  }
+  .login .input-grp {
+    display: flex;
+    gap: 1rem;
+  }
+  .error-div,
+  .success-div {
+    top: 100px;
+  }
+}
