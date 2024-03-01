@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Form, useNavigate, useParams } from "react-router-dom";
-import { courseValidate, lectureValidation } from "../utils/ValidateInputs";
+import { useParams } from "react-router-dom";
+import { lectureValidation } from "../utils/ValidateInputs";
 
 function AddLecture() {
   const [users, setUsers] = useState([]);

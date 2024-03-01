@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { loginValidate } from "../utils/ValidateInputs";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
@@ -9,7 +9,7 @@ function Login() {
   const [data, setData] = useState({});
   const [error, setError] = useState({});
   const [serverError, setServerError] = useState(false);
-  const { isLoggedIn, login, logout } = useAuth();
+  const { login } = useAuth();
   const insertData = (e) => {
     setData({ ...data, [e.target.id]: e.target.value });
   };

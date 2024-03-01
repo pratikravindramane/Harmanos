@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem("token");
     if (token) setLoggedIn(true);
     else setLoggedIn(false);
-  });
+  }, []);
   // Function to set the login state to true
   const login = () => {
     setLoggedIn(true);

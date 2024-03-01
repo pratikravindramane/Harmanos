@@ -68,7 +68,7 @@ export const lectureValidation = (values) => {
   if (!values.date) {
     errors.date = "date is required!";
   }
-  if (values.instructor == "0") {
+  if (values.instructor === "0") {
     errors.instructor = "instructor is required!";
   }
   return errors;
