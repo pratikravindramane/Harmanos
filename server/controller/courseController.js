@@ -5,10 +5,12 @@ const Instructor = require("../model.js/Instructor");
 const { compareDates } = require("../utils/compareDates");
 const validateMongoDbId = require("../utils/validateMongoDbId");
 const Lecture = require("../model.js/Lecture");
+const { default: mongoose } = require("mongoose");
 // get a course
 const getACourse = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  validateMongoDbId(id);
+  const valid = mongoose.Types.ObjectId.isValid(id);
+  if (!valid) throw new Error("Not a Valid ID");
   try {
     const course = await Course.findById(id);
     const lectures = await Lecture.find({ course: id }).populate(

@@ -6,6 +6,7 @@ const genrateToken = require("../utils/genrateToken");
 const { currentTime } = require("../utils/TimeDate");
 const Course = require("../model.js/Course");
 const Lecture = require("../model.js/Lecture");
+const { default: mongoose } = require("mongoose");
 
 // login
 const login = asyncHandler(async (req, res) => {
@@ -97,7 +98,8 @@ const getAll = asyncHandler(async (req, res) => {
 // get a instructor
 const getAInstructor = asyncHandler(async (req, res) => {
   const id = req.params.id;
-  validateMongoDbId(id);
+  const valid = mongoose.Types.ObjectId.isValid(id);
+  if (!valid) throw new Error("Not a Valid ID");
 
   try {
     const instructor = await Instructor.findById(id);
